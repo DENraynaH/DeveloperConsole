@@ -33,7 +33,7 @@ namespace R.DeveloperConsole
       public void GetInput(string consoleInput)
       {
          _lastInput = consoleInput;
-         GetComponent<ConsoleLogger>().LogMessage(consoleInput, LogMode.None);
+         GetComponent<ConsoleLogger>().LogMessage(consoleInput, LogMode.UserTyped);
       }
 
       private void DisableConsole() => _consoleInterface.SetActive(false);
