@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49518c5e77b43b84187dd3da4cf064a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _consoleLines: 2
+  _consoleLines: 10
   _windowSize: {x: 0, y: 0}
   _consoleToggle: 106
   _logUnityConsole: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.5
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0

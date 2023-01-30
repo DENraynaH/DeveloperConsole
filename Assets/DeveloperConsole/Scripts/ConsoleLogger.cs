@@ -9,13 +9,14 @@ namespace R.DeveloperConsole
     public class ConsoleLogger : MonoBehaviour
     {
 
-        private DeveloperConsole _developerConsole; 
-        private readonly Queue _logQueue = new Queue();
-        [SerializeField] private TextMeshProUGUI _consoleOutput;
-        [SerializeField] private uint _consoleLines;
+        private DeveloperConsole _developerConsole;
+        private ConsoleUIHandler _consoleUIHandler;
         
+        private readonly Queue _logQueue = new Queue();
+
         private void Awake()
         {
+            _consoleUIHandler = GetComponent<ConsoleUIHandler>();
             _developerConsole = GetComponent<DeveloperConsole>();
         }
 
@@ -65,12 +66,12 @@ namespace R.DeveloperConsole
 
         private void CleanLog()
         {
-            while (_logQueue.Count > _consoleLines) { _logQueue.Dequeue(); }
+            while (_logQueue.Count > _developerConsole.ConsoleLines) { _logQueue.Dequeue(); }
         }
    
         private void OutputDebugMessages()
         {
-            _consoleOutput.text = string.Join("\n", _logQueue.ToArray());
+            _consoleUIHandler.ConsoleOutput.text = string.Join("\n", _logQueue.ToArray());
         }
         
     }

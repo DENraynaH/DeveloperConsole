@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,9 +11,12 @@ namespace  R.DeveloperConsole
 {
     public class ConsoleUIHandler : MonoBehaviour, IDragHandler
     {
-        [SerializeField] private float _UIscale = 1;
-        [SerializeField] private float _UIscaleMin = 0.6f;
-        [SerializeField] private float _UIscaleMax = 1.4f;
+        [SerializeField] private float _currentScale = 1;
+        [SerializeField] private float _scaleMinimum = 0.6f;
+        [SerializeField] private float _scaleMaximum = 1.4f;
+        [SerializeField] private TextMeshProUGUI _consoleOutput;
+
+        public TextMeshProUGUI ConsoleOutput => _consoleOutput;
 
         [Header("References")]
         [SerializeField] private Canvas _canvas;
