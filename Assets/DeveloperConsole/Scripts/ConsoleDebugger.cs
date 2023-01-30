@@ -16,7 +16,7 @@ public class ConsoleDebugger : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            GetComponent<ConsoleLogger>().HandleCommandLog("command example", LogMode.Command);
+            GetComponent<ConsoleLogger>().LogMessage("command example", LogMode.Command);
         }
 
         if (Input.GetKeyDown(KeyCode.Q))

@@ -41,10 +41,13 @@ namespace R.DeveloperConsole
             CleanLog();
         }
 
-        public void HandleCommandLog(string logMessage, LogMode logMode)
+        public void LogMessage(string logMessage, LogMode logMode)
         {
             switch (logMode)
             {
+                case LogMode.UserTyped:
+                    _logQueue.Enqueue($"{logMessage}");
+                    break;
                 case LogMode.Command:
                     _logQueue.Enqueue($"[Command] {logMessage}");
                     break;
@@ -78,6 +81,7 @@ namespace R.DeveloperConsole
 
     public enum LogMode
     {
+        UserTyped,
         Command,
         Warning,
         Error, 
