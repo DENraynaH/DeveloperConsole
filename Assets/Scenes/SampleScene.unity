@@ -643,6 +643,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a5b5c1902ab9d4ea0b927992f7e300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _UIscale: 1
+  _UIscaleMin: 0.2
+  _UIscaleMax: 3
   _canvas: {fileID: 683375390}
   _rectTransform: {fileID: 1388680054}
 --- !u!1 &619394800
@@ -1204,7 +1207,7 @@ RectTransform:
   - {fileID: 2090950529}
   - {fileID: 1417613434}
   m_Father: {fileID: 2089001187}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1476,7 +1479,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1417613435}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 555419778}
+        m_TargetAssemblyTypeName: R.DeveloperConsole.ConsoleUIHandler, Assembly-CSharp
+        m_MethodName: AddScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -0.2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1601988462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,7 +1560,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2089001187}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1883,8 +1898,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1172131431}
-  - {fileID: 1045925095}
   - {fileID: 1732060510}
+  - {fileID: 1045925095}
   m_Father: {fileID: 254418179}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2051,7 +2066,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2090950530}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 555419778}
+        m_TargetAssemblyTypeName: R.DeveloperConsole.ConsoleUIHandler, Assembly-CSharp
+        m_MethodName: AddScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0.2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2137183928
 GameObject:
   m_ObjectHideFlags: 0
