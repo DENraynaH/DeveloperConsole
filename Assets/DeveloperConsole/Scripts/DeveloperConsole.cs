@@ -9,6 +9,7 @@ namespace R.DeveloperConsole
    {
       private bool _isActive;
       private GameObject _consoleInterface;
+      private string _lastInput;
 
       [Header("Settings")] 
       
@@ -26,6 +27,11 @@ namespace R.DeveloperConsole
       {
          if (_consoleInterface.activeSelf) { DisableConsole(); }
          else { EnableConsole(); }
+      }
+
+      public void GetInput(string consoleInput)
+      {
+         _lastInput = consoleInput;
       }
 
       private void DisableConsole() => _consoleInterface.SetActive(false);
