@@ -613,8 +613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda8a93289c0c72469b7fce4f21cf550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _consoleOutput: {fileID: 654577662}
-  _consoleLines: 22
 --- !u!4 &555419777
 Transform:
   m_ObjectHideFlags: 0
@@ -643,9 +641,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a5b5c1902ab9d4ea0b927992f7e300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIscale: 1
-  _UIscaleMin: 0.2
-  _UIscaleMax: 3
+  _scaleMinimum: 0.6
+  _scaleMaximum: 1.4
+  _consoleOutput: {fileID: 654577662}
   _canvas: {fileID: 683375390}
   _rectTransform: {fileID: 1388680054}
 --- !u!1 &619394800
@@ -1482,13 +1480,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 555419778}
         m_TargetAssemblyTypeName: R.DeveloperConsole.ConsoleUIHandler, Assembly-CSharp
-        m_MethodName: AddScale
+        m_MethodName: SubtractScale
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -0.2
+          m_FloatArgument: 0.2
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
