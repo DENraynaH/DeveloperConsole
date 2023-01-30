@@ -12,7 +12,7 @@ namespace R.DeveloperConsole
         private DeveloperConsole _developerConsole; 
         private readonly Queue _logQueue = new Queue();
         [SerializeField] private TextMeshProUGUI _consoleOutput;
-        [SerializeField] private uint _consoleLines = 22;
+        [SerializeField] private uint _consoleLines;
         
         private void Awake()
         {
