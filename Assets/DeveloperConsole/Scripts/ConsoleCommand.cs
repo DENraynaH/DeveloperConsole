@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class ConsoleCommand : ScriptableObject
+public class ConsoleCommand : ScriptableObject, IConsoleCommand
 {
     [SerializeField] private string _commandPrefix;
     public string CommandPrefix => _commandPrefix;
@@ -15,4 +15,11 @@ public class ConsoleCommand : ScriptableObject
     {
         throw new System.NotImplementedException();
     }
+}
+
+public interface IConsoleCommand
+{
+    string CommandPrefix { get; }
+    void Execute(string[] args);
+    
 }

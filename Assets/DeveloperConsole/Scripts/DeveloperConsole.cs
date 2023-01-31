@@ -15,8 +15,7 @@ namespace R.DeveloperConsole
       private string _lastCommand;
 
       [Header("Settings")] 
-      
-      [SerializeField] private List<ConsoleCommand> _consoleCommands = new List<ConsoleCommand>();
+      [SerializeField] private List<ConsoleCommand> _consoleCommands;
       [SerializeField] private int _consoleLines;
       [SerializeField] private Vector2 _windowSize;
       [SerializeField] private char _consoleToggle;
@@ -24,6 +23,7 @@ namespace R.DeveloperConsole
 
       private void Start()
       {
+         Debug.Log(_consoleCommands[0].CommandPrefix);
          _consoleInterface = transform.GetChild(0).gameObject;
       }
 
@@ -37,7 +37,7 @@ namespace R.DeveloperConsole
       {
          _lastCommand = consoleInput;
          GetComponent<ConsoleLogger>().LogMessage(consoleInput, LogMode.UserTyped);
-         //ExecuteCommand();
+         ExecuteCommand();
       }
 
       private void ExecuteCommand()
@@ -46,12 +46,17 @@ namespace R.DeveloperConsole
          string[] commandArguments = ConsoleUtilities.GetArguments(_lastCommand);
          
          ConsoleCommand currentCommand = GetCommand(commandPrefix);
+         if (currentCommand == null)
+         {
+            GetComponent<ConsoleLogger>().LogMessage("Command Not Found!", LogMode.Error);
+            return;
+         }
          currentCommand.Execute(commandArguments);
       }
       
       private ConsoleCommand GetCommand(string commandPrefix)
       {
-         return _consoleCommands.FirstOrDefault(consoleCommand => consoleCommand.name == commandPrefix);
+         return _consoleCommands.FirstOrDefault(consoleCommand => consoleCommand.CommandPrefix == commandPrefix);
       }
 
       private void DisableConsole() => _consoleInterface.SetActive(false);
