@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace R.DeveloperConsole
@@ -10,10 +12,11 @@ namespace R.DeveloperConsole
 
       private bool _isActive;
       private GameObject _consoleInterface;
-      private string _lastInput;
+      private string _lastCommand;
 
       [Header("Settings")] 
       
+      [SerializeField] private List<ConsoleCommand> _consoleCommands = new List<ConsoleCommand>();
       [SerializeField] private int _consoleLines;
       [SerializeField] private Vector2 _windowSize;
       [SerializeField] private char _consoleToggle;
@@ -32,8 +35,23 @@ namespace R.DeveloperConsole
 
       public void GetInput(string consoleInput)
       {
-         _lastInput = consoleInput;
+         _lastCommand = consoleInput;
          GetComponent<ConsoleLogger>().LogMessage(consoleInput, LogMode.UserTyped);
+         ExecuteCommand();
+      }
+
+      private void ExecuteCommand()
+      {
+         string commandPrefix = ConsoleUtilities.GetPrefix(_lastCommand);
+         string[] commandArguments = ConsoleUtilities.GetArguments(_lastCommand);
+         
+         ConsoleCommand currentCommand = GetCommand(commandPrefix);
+         currentCommand.Execute(commandArguments);
+      }
+      
+      private ConsoleCommand GetCommand(string commandPrefix)
+      {
+         return _consoleCommands.FirstOrDefault(consoleCommand => consoleCommand.name == commandPrefix);
       }
 
       private void DisableConsole() => _consoleInterface.SetActive(false);
@@ -43,7 +61,6 @@ namespace R.DeveloperConsole
       public int ConsoleLines => _consoleLines;
       
       #endregion
-
-
+      
    }
 }

@@ -1,21 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class ConsoleCommand : ScriptableObject, IExecutable
+
+public class ConsoleCommand : ScriptableObject
 {
-    [SerializeField] private string _commandInput = string.Empty;
-    public string CommandInput => _commandInput;
+    [SerializeField] private string _commandPrefix;
+    public string CommandPrefix => _commandPrefix;
 
-    public void Execute(string[] args)
+    public virtual void Execute(string[] args)
     {
         throw new System.NotImplementedException();
     }
-}
-
-public interface IExecutable
-{
-    string CommandInput { get; }
-    void Execute(string[] args);
 }

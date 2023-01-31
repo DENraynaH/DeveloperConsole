@@ -14,9 +14,6 @@ namespace  R.DeveloperConsole
         [SerializeField] private float _scaleMinimum = 0.6f;
         [SerializeField] private float _scaleMaximum = 1.4f;
         [SerializeField] private TextMeshProUGUI _consoleOutput;
-
-        private Vector3 _scaleMinimumVector => new Vector3(_scaleMinimum, _scaleMinimum, _scaleMinimum);
-        private Vector3 _scaleMaxmiumVector => new Vector3(_scaleMaximum, _scaleMaximum, _scaleMaximum);
         private float _currentScale => _rectTransform.localScale.x;
 
         public TextMeshProUGUI ConsoleOutput => _consoleOutput;
@@ -29,8 +26,8 @@ namespace  R.DeveloperConsole
         {
             _rectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;
         }
-
-        public void SetScale(float scale)
+        
+        private void SetScale(float scale)
         {
             _rectTransform.localScale = new Vector3(scale, scale, scale);
         }
@@ -46,8 +43,6 @@ namespace  R.DeveloperConsole
             if (_currentScale + scale < _scaleMinimum) { return; }
             SetScale(_rectTransform.localScale.x - scale);
         }
-        
-        
     }
 }
 
