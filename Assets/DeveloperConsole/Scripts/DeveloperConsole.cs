@@ -37,7 +37,7 @@ namespace R.DeveloperConsole
       {
          _lastCommand = consoleInput;
          GetComponent<ConsoleLogger>().LogMessage(consoleInput, LogMode.UserTyped);
-         ExecuteCommand();
+         //ExecuteCommand();
       }
 
       private void ExecuteCommand()

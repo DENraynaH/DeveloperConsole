@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="68d450bf-e200-45b4-98e2-be5e5d975479" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeveloperConsole/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeveloperConsole/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleUIHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleUIHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleUtilities.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/DeveloperConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/DeveloperConsole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

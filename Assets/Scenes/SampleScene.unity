@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _consoleCommands: []
-  _consoleLines: 10
+  _consoleLines: 17
   _windowSize: {x: 0, y: 0}
   _consoleToggle: 106
   _logUnityConsole: 0
