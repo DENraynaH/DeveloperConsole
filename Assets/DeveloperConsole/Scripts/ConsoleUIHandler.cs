@@ -18,7 +18,7 @@ namespace  R.DeveloperConsole
         [SerializeField] private Canvas _canvas;
         [SerializeField] private RectTransform _rectTransform;
         [SerializeField] private TextMeshProUGUI _consoleOutput;
-        [SerializeField] private TextMeshProUGUI _consoleInput;
+        [SerializeField] private TMP_InputField _consoleInput;
 
         public void OnDrag(PointerEventData eventData)
         {

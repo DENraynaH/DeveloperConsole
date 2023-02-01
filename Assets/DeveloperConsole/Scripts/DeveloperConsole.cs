@@ -10,6 +10,8 @@ namespace R.DeveloperConsole
    public class DeveloperConsole : Singleton<DeveloperConsole>
    {
       private ConsoleLogger _consoleLogger;
+      private ConsoleUIHandler _consoleUIHandler;
+      
       private bool _isActive;
       private GameObject _consoleInterface;
       private string _lastCommand;
@@ -28,6 +30,7 @@ namespace R.DeveloperConsole
       {
          _consoleInterface = transform.GetChild(0).gameObject;
          _consoleLogger = GetComponent<ConsoleLogger>();
+         _consoleUIHandler = GetComponent<ConsoleUIHandler>();
       }
 
       public void ToggleConsole()
@@ -59,6 +62,7 @@ namespace R.DeveloperConsole
          string[] commandArguments = ConsoleUtilities.GetArguments(_lastCommand);
          
          ConsoleCommand currentCommand = GetCommand(commandPrefix);
+         _consoleUIHandler.ClearInput();
          if (currentCommand == null)
          {
             _consoleLogger.LogMessage("Command Not Found!", LogMode.Error);
