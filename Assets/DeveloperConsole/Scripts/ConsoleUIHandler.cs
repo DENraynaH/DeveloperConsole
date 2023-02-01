@@ -13,14 +13,12 @@ namespace  R.DeveloperConsole
     {
         [SerializeField] private float _scaleMinimum = 0.6f;
         [SerializeField] private float _scaleMaximum = 1.4f;
-        [SerializeField] private TextMeshProUGUI _consoleOutput;
-        private float _currentScale => _rectTransform.localScale.x;
-
-        public TextMeshProUGUI ConsoleOutput => _consoleOutput;
 
         [Header("References")]
         [SerializeField] private Canvas _canvas;
         [SerializeField] private RectTransform _rectTransform;
+        [SerializeField] private TextMeshProUGUI _consoleOutput;
+        [SerializeField] private TextMeshProUGUI _consoleInput;
 
         public void OnDrag(PointerEventData eventData)
         {
@@ -34,15 +32,28 @@ namespace  R.DeveloperConsole
 
         public void AddScale(float scale)
         {
-            if (_currentScale + scale > _scaleMaximum) { return; }
+            if (_rectTransform.localScale.x + scale > _scaleMaximum) { return; }
             SetScale(_rectTransform.localScale.x + scale);
         }
 
         public void SubtractScale(float scale)
         {
-            if (_currentScale + scale < _scaleMinimum) { return; }
+            if (_rectTransform.localScale.x + scale < _scaleMinimum) { return; }
             SetScale(_rectTransform.localScale.x - scale);
         }
+
+        public void ClearInput()
+        {
+            Debug.Log("clearing input field");
+            _consoleInput.text = String.Empty;
+        }
+
+        #region Get
+
+        public TextMeshProUGUI ConsoleOutput => _consoleOutput;
+
+        #endregion
+        
     }
 }
 

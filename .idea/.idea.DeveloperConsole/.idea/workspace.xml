@@ -6,13 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="68d450bf-e200-45b4-98e2-be5e5d975479" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeveloperConsole/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeveloperConsole/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/TestCommand.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/TestCommand.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/TestCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/TestCommand.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/BasicEventCommand.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/BasicEventCommand.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/BasicEventCommand2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/BasicEventCommand2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/EventCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/EventCommand.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/TestScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/Commands/TestScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleLogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleUIHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleUIHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/ConsoleUtilities.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/DeveloperConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DeveloperConsole/Scripts/DeveloperConsole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +97,8 @@
       <updated>1675104942416</updated>
       <workItem from="1675104953849" duration="1849000" />
       <workItem from="1675157636170" duration="1037000" />
-      <workItem from="1675158720275" duration="1871000" />
+      <workItem from="1675158720275" duration="2474000" />
+      <workItem from="1675216942840" duration="3773000" />
     </task>
     <servers />
   </component>

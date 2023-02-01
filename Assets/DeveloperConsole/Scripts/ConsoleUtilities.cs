@@ -30,6 +30,7 @@ namespace R.DeveloperConsole
             string[] arrayCommand = CommandToArray(consoleCommand);
             return arrayCommand[0];
         }
+        
     }
 }
 

@@ -5,16 +5,32 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-
+[CreateAssetMenu(fileName = "Command", menuName = "Commands/Command")]
 public class ConsoleCommand : ScriptableObject, IConsoleCommand
 {
+    private Action _commandEvents;
+    
     [SerializeField] private string _commandPrefix;
-    public string CommandPrefix => _commandPrefix;
 
-    public virtual void Execute(string[] args)
+    public void Execute(string[] args)
     {
-        throw new System.NotImplementedException();
+        _commandEvents.Invoke();
     }
+
+    public void AssignMethod(Action eventAction)
+    {
+        _commandEvents += eventAction;
+    }
+
+    public void RemoveMethod(Action eventAction)
+    {
+        _commandEvents -= eventAction;
+    }
+
+    #region Get
+    public string CommandPrefix => _commandPrefix;
+    #endregion
+    
 }
 
 public interface IConsoleCommand

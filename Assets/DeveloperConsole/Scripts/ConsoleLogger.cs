@@ -37,6 +37,7 @@ namespace R.DeveloperConsole
 
         private void HandleLog(string logMessage, string stackTrace, LogType logType)
         {
+            if (!_developerConsole.EnableUnityLogging) { return; }
             _logQueue.Enqueue($"[{logType}] : {logMessage}");
             CleanLog();
         }
